@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import "../assets/styles/NavBar.CSS"; // Assuming you have a CSS file for styles
+import "../assets/styles/NavBar.CSS";
+import { IoIosArrowDown } from "react-icons/io";
+import { FaSun } from "react-icons/fa";
 
 function NavBar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,9 +22,13 @@ function NavBar() {
         </ul>
       </div>
       <div className="toggle-container">
-        <span className="label">ES</span>
+        <span className="label">
+          ES <IoIosArrowDown />
+        </span>
         <div className={`switch ${darkMode ? "" : "active"}`}>
-          <div className="circle" />
+          <div className="circle">
+            <FaSun />
+          </div>
         </div>
       </div>
     </nav>

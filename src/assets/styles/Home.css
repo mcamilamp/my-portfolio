@@ -3,8 +3,12 @@
   justify-content: center;
   gap: 5rem;
   align-items: center;
-  padding: 4rem 10%;
-  min-height: 100vh;
+  padding: 4rem 10% 4rem 10%;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
 }
 
 .home-content h1 {
@@ -22,6 +26,13 @@
   font-weight: 300;
 }
 
+.buttons-home {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
 .btn-pink {
   background-color: #ff0099;
   color: white;
@@ -30,13 +41,34 @@
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  /* transition: 0.3s ease; */
+}
+
+.btn-pink:hover {
+  border-right: #ff83ce 6px solid;
+  border-bottom: #ff83ce 6px solid;
+}
+
+.btn-yellow {
+  background-color: #ffdc36;
+  color: black;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  /* transition: 0.3s ease; */
+}
+
+.btn-yellow:hover {
+  border-right: #aa8b00 6px solid;
+  border-bottom: #aa8b00 6px solid;
 }
 
 .home-image {
   position: relative;
-  width: 295px;
-  height: 330px;
+  width: 310px;
+  height: 348px;
 }
 
 .image-bg {
@@ -57,4 +89,20 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   z-index: 1;
   position: relative;
+}
+
+.light-effect {
+  position: absolute;
+  top: -1%;
+  left: -80%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(184, 184, 184, 0) 80%
+  );
+
+  filter: blur(60px);
+  z-index: 0;
 }
