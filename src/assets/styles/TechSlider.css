@@ -1,7 +1,31 @@
+.tech-slider-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tech-slider-header .title-tech-slider {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+}
+
+.title-tech-slider::after,
+.title-tech-slider::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #ff0099;
+  margin: 0.5rem auto;
+}
+
 .tech-slider {
   width: 100%;
   background-color: transparent;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  overflow: visible;
 }
 
 .tech-slider-wrapper {
@@ -13,10 +37,11 @@
   font-size: 3rem;
   margin: 0 1.5rem;
   transition: transform 0.3s ease;
+  min-height: 60px;
 }
 
 .tech-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .tech-item.react {

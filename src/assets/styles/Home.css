@@ -26,6 +26,13 @@
   font-weight: 300;
 }
 
+.home-content .slogan {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: black;
+  padding: 15px;
+}
+
 .buttons-home {
   display: flex;
   gap: 1rem;
@@ -68,12 +75,13 @@
 .home-image {
   position: relative;
   width: 310px;
-  height: 348px;
+  height: 378px;
+  border: 4px dotted #ff0099;
 }
 
 .image-bg {
   position: absolute;
-  background-color: white;
+  background-color: rgb(156, 155, 155);
   width: 100%;
   height: 100%;
   top: 0;
@@ -94,7 +102,7 @@
 .light-effect {
   position: absolute;
   top: -1%;
-  left: -80%;
+  left: -50%;
   width: 300px;
   height: 300px;
   background: radial-gradient(

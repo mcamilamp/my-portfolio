@@ -21,6 +21,9 @@ import {
 const TechSlider = () => {
   return (
     <div className="tech-slider-wrapper">
+      <div className="tech-slider-header">
+        <h2 className="title-tech-slider">Mi Stack tecnológico</h2>
+      </div>
       <div className="tech-slider">
         <Marquee speed={50} gradient={false}>
           <div className="tech-item react">
