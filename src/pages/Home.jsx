@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/Home.CSS";
-// import profileImage from "../assets/images/foto-perfil.jpg";
-import profileImage from "../assets/images/foto2.jpg";
+import profileImage from "../assets/images/foto-perfil.jpg";
+// import profileImage from "../assets/images/foto2.jpg";
 
 function Home() {
   return (
@@ -9,8 +9,9 @@ function Home() {
       <div className="home-content">
         <div className="light-effect"></div>
         <h1>
-          María Camila <br />
-          Mercado Payares
+          <span className="highlight-name">María Camila</span>
+          <br />
+          <span className="highlight-lastname">Mercado Payares</span>
         </h1>
         <p>Estudiante de Ingeniería de Sistemas</p>
         <p className="slogan">
@@ -22,10 +23,10 @@ function Home() {
           <button className="btn-yellow">Mi CV</button>
         </div>
       </div>
-      <div className="home-image">
+      {/* <div className="home-image">
         <div className="image-bg" />
         <img src={profileImage} alt="María Camila" />
-      </div>
+      </div> */}
     </section>
   );
 }
