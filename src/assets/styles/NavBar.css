@@ -1,7 +1,8 @@
 .navBar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 5rem;
   padding: 1.5rem 10%;
   position: sticky;
   top: 0;
@@ -25,10 +26,41 @@
 .toggle-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 3rem;
   background-color: white;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 2rem;
   border-radius: 30px;
   cursor: pointer;
   user-select: none;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: black;
+}
+
+.switch {
+  width: 36px;
+  height: 20px;
+  background-color: transparent;
+  border: 1.5px solid black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px;
+  transition: all 0.3s ease;
+}
+
+.switch .circle {
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch.active {
+  justify-content: flex-end;
 }

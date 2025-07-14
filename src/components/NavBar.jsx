@@ -21,7 +21,7 @@ function NavBar() {
       </div>
       <div className="toggle-container">
         <span className="label">ES</span>
-        <div className="{`switch ${darkMode ? '' : 'active'}`}">
+        <div className={`switch ${darkMode ? "" : "active"}`}>
           <div className="circle" />
         </div>
       </div>
