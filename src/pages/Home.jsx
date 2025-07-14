@@ -14,6 +14,7 @@ function Home() {
         <button className="btn-pink">Sobre mí</button>
       </div>
       <div className="home-image">
+        <div className="image-bg" />
         <img src={profileImage} alt="María Camila" />
       </div>
     </section>
