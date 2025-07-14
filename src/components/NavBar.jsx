@@ -25,7 +25,10 @@ function NavBar() {
         <span className="label">
           ES <IoIosArrowDown />
         </span>
-        <div className={`switch ${darkMode ? "" : "active"}`}>
+        <div
+          className={`switch ${darkMode ? "" : "active"}`}
+          onClick={toggleDarkMode}
+        >
           <div className="circle">
             <FaSun />
           </div>
