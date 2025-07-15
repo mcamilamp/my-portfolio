@@ -1,14 +1,7 @@
-.home {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  align-items: center;
-  padding: 4rem 10% 4rem 10%;
-}
-
 .home-content {
   position: relative;
   z-index: 1;
+  margin-top: 1rem;
 }
 
 .home-content h1 {
@@ -25,6 +18,10 @@
   font-weight: 300;
 }
 
+.home-content .slogan {
+  letter-spacing: 2px;
+}
+
 /* .home-content .slogan {
   background-color: #ffffff;
   border-radius: 10px;
@@ -37,25 +34,26 @@
   gap: 1rem;
   justify-content: center;
   margin-top: 1.5rem;
+  margin-bottom: 4rem;
 }
 
 .btn-pink {
   background-color: #aaaaaa83;
   color: white;
   border: none;
-  padding: 0.8rem 1.6rem;
+  padding: 0.5rem 1.6rem;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   border-right: #ff0080 6px solid;
   border-bottom: #ff0080 6px solid;
+  font-size: 1.1rem;
   /* transition: 0.3s ease; */
 }
 
-/* .btn-pink:hover {
-  border-right: #ff83ce 6px solid;
-  border-bottom: #ff83ce 6px solid;
-} */
+.btn-pink:hover {
+  background-color: #ff0080;
+}
 
 .btn-yellow {
   background-color: #aaaaaa83;
@@ -67,13 +65,14 @@
   cursor: pointer;
   border-right: #f0db4f 6px solid;
   border-bottom: #f0db4f 6px solid;
+  font-size: 1.1rem;
+
   /* transition: 0.3s ease; */
 }
 
-/* .btn-yellow:hover {
-  border-right: #aa8b00 6px solid;
-  border-bottom: #aa8b00 6px solid;
-} */
+.btn-yellow:hover {
+  background-color: #f0db4f;
+}
 
 .home-image {
   position: relative;
@@ -156,4 +155,40 @@
   background-color: #ff0080; /* fucsia */
   z-index: -1;
   transform: skewX(-10deg);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact::after,
+.contact::before {
+  content: "";
+  display: block;
+  width: 1000px;
+  height: 3px;
+  background-color: #ff0099;
+  margin: 0.9rem auto;
+}
+
+.title-contact {
+  font-size: 1.8rem;
+}
+
+.text-contact {
+  margin-top: 1rem;
+  font-size: 20px;
+}
+
+.btn-contact {
+  background-color: #aaaaaa83;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2rem;
+  letter-spacing: 2px;
 }

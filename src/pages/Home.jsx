@@ -1,5 +1,8 @@
 import React from "react";
 import "../assets/styles/Home.CSS";
+import Projects from "../components/Projects.jsx";
+import TechSlider from "../components/TechSlider";
+
 import profileImage from "../assets/images/foto-perfil.jpg";
 // import profileImage from "../assets/images/foto2.jpg";
 
@@ -27,6 +30,17 @@ function Home() {
         <div className="image-bg" />
         <img src={profileImage} alt="María Camila" />
       </div> */}
+      <TechSlider />
+      <Projects />
+
+      <div className="contact">
+        <h3 className="title-contact">¿Te interesa mi perfil profesional?</h3>
+        <p className="text-contact">
+          Disponible para colaborar en desarrollo, diseño o gestión de
+          proyectos.
+        </p>
+        <button className="btn-contact">¡Contáctame Ahora!</button>
+      </div>
     </section>
   );
 }
