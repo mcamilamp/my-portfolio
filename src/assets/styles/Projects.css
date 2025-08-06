@@ -31,17 +31,19 @@
 
 .project-card {
   width: 450px;
-  height: 370px;
+  height: 380px;
   background: #1a1a1a;
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  text-align: start;
 }
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.234);
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.234); */
+  cursor: pointer;
 }
 
 .project-image {
@@ -61,17 +63,48 @@
   margin-bottom: 0.5rem;
 }
 
+.project-content p {
+  margin-top: 1rem;
+  font-size: 15px;
+  color: #cccccc;
+}
+
+.title-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.project-badge.web {
+  background-color: #f0db4f; /* amarillo */
+  color: #000;
+}
+
+.project-badge.qa {
+  background-color: #6c63ff; /* morado */
+}
+
+.project-badge.pm {
+  background-color: #62d47b; /* verde */
+}
+
+/* 
 .project-link {
   display: inline-block;
   margin-top: 1rem;
   color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   transition: color 0.2s;
-}
-
-.project-link:hover {
-}
+} */
 
 /* Projects-nav */
 

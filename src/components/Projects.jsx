@@ -11,24 +11,28 @@ const projects = [
     description:
       "Aplicación educativa personalizada según estilos de aprendizaje.",
     image: project1Img,
+    filter: "Web",
     link: "#",
   },
   {
     title: "Ride Share Connect",
     description: "Plataforma de transporte compartido con reservas y pagos.",
     image: project2Img,
+    filter: "Web",
     link: "#",
   },
   {
     title: "Airline App",
     description: "Sistema para aerolíneas con gestión de vuelos y usuarios.",
     image: project3Img,
+    filter: "QA",
     link: "#",
   },
   {
     title: "Airline App",
     description: "Sistema para aerolíneas con gestión de vuelos y usuarios.",
     image: project4Img,
+    filter: "PM",
     link: "#",
   },
 ];
@@ -65,16 +69,24 @@ function Projects() {
                 className="project-image"
               />
               <div className="project-content">
-                <h3>{project.title}</h3>
+                <div className="title-badge">
+                  <h3 className="project-title">{project.title}</h3>
+                  <span
+                    className={`project-badge ${project.filter.toLowerCase()}`}
+                  >
+                    {project.filter}
+                  </span>
+                </div>
                 <p>{project.description}</p>
-                <a
+
+                {/* <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
                 >
-                  Ver más
-                </a>
+                  Explorar Proyecto
+                </a> */}
               </div>
             </div>
           ))}

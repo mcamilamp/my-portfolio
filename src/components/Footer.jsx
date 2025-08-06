@@ -25,6 +25,7 @@ function Footer() {
           <FaEnvelope />
         </a>
       </div>
+      <p className="footer-bible">Levántate y Resplandece - Isaías 60:1</p>
       <p className="footer-copy">
         © {new Date().getFullYear()} Gracias por visitar mi portafolio web.
       </p>

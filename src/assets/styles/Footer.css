@@ -29,7 +29,13 @@
   color: #ff8fd2;
 }
 
+.footer-bible {
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
 .footer-copy {
+  margin-top: 18px;
   font-size: 0.9rem;
   color: #aaa;
 }
