@@ -34,41 +34,50 @@ const projects = [
 ];
 
 function Projects() {
+  const [activeFilter, setActiveFilter] = React.useState("Todos");
+
   return (
     <section className="projects-section">
       <h2 className="projects-title">Mis Proyectos</h2>
 
       <nav className="projects-nav">
         <ul>
-          <li>Todos</li>
-          <li>Web</li>
-          <li>QA</li>
-          <li>PM</li>
+          {["Todos", "Web", "QA", "PM"].map((filter) => (
+            <li
+              key={filter}
+              className={activeFilter === filter ? "active" : ""}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </li>
+          ))}
         </ul>
       </nav>
 
       <div className="projects-container">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-            />
-            <div className="project-content">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                Ver más
-              </a>
+        {projects
+          .filter((p) => activeFilter === "Todos" || p.filter === activeFilter)
+          .map((project, index) => (
+            <div className="project-card" key={index}>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  Ver más
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </section>
   );

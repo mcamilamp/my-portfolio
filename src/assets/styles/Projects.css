@@ -129,3 +129,8 @@
   background-color: hsla(0, 0%, 100%, 0.3);
   border-radius: 5px;
 }
+
+.projects-nav li.active {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 5px;
+}
