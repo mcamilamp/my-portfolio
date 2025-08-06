@@ -17,12 +17,11 @@ function NavBar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
-        setShowNav(false);
-      } else {
+      if (currentScrollY === 0) {
         setShowNav(true);
+      } else {
+        setShowNav(false);
       }
-      setLastScrollY(currentScrollY);
     };
     window.addEventListener("scroll", handleScroll);
 

@@ -37,6 +37,16 @@ function Projects() {
   return (
     <section className="projects-section">
       <h2 className="projects-title">Mis Proyectos</h2>
+
+      <nav className="projects-nav">
+        <ul>
+          <li>Todos</li>
+          <li>Web</li>
+          <li>QA</li>
+          <li>PM</li>
+        </ul>
+      </nav>
+
       <div className="projects-container">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>

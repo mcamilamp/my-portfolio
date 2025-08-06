@@ -4,7 +4,7 @@
 }
 
 .tech-slider-header .title-tech-slider {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
   letter-spacing: 2px;
@@ -40,15 +40,18 @@
   min-height: 60px;
 }
 
-.tech-item:hover {
+/* .tech-item:hover {
   transform: scale(1.1);
-}
+} */
 
 .tech-item.react {
   color: #61dafb;
 }
 .tech-item.tailwind {
   color: #38bdf8;
+}
+.tech-item.cypress {
+  color: #354250;
 }
 .tech-item.springboot {
   color: #6db33f;

@@ -16,6 +16,7 @@ import {
   SiAngular,
   SiPhp,
   SiFigma,
+  SiCypress,
 } from "react-icons/si";
 
 const TechSlider = () => {
@@ -31,6 +32,9 @@ const TechSlider = () => {
           </div>
           <div className="tech-item tailwind">
             <SiTailwindcss />
+          </div>
+          <div className="tech-item cypress">
+            <SiCypress />
           </div>
           <div className="tech-item springboot">
             <SiSpringboot />
