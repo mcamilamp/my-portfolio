@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "../assets/styles/NavBar.CSS";
+import "../assets/styles/MainNavBar.CSS";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSun } from "react-icons/fa";
 
-function NavBar() {
+function MainNavBar() {
   const [darkMode, setDarkMode] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [activeLink, setActiveLink] = useState("home");
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -32,10 +33,15 @@ function NavBar() {
     <nav className={`navBar ${showNav ? "" : "navBar-hidden"}`}>
       <div className="links">
         <ul className="nav-links">
-          <li>Inicio</li>
-          <li>Sobre mí</li>
-          <li>Proyectos</li>
-          <li>Contáctame</li>
+          {["Inicio", "Sobre mí", "Proyectos", "Contacto"].map((link) => (
+            <li
+              key={link}
+              className={activeLink === link ? "active" : ""}
+              onClick={() => setActiveLink(link)}
+            >
+              {link}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="toggle-container">
@@ -55,4 +61,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default MainNavBar;

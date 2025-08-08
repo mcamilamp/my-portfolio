@@ -27,6 +27,31 @@
   transition: color 0.3s ease;
 }
 
+.nav-links li {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff0099;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 60%;
+}
+
+.nav-links li.active::after {
+  width: 60%;
+}
+
 /* Toggle */
 .toggle-container {
   display: flex;
@@ -42,13 +67,13 @@
 .label {
   font-size: 0.9rem;
   font-weight: 600;
-  color: black;
+  color: #1b1a2c;
 }
 
 .switch {
   width: 55px;
   height: 30px;
-  border: 1.7px solid black;
+  border: 1.7px solid #1b1a2c;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -61,7 +86,7 @@
 .switch .circle {
   width: 24px;
   height: 24px;
-  background-color: black;
+  background-color: #1b1a2c;
   border-radius: 50%;
   transition: transform 0.3s ease;
   display: flex;
