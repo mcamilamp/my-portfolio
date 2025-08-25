@@ -1,13 +1,20 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import MainNavBar from "./components/MainNavBar";
 import Footer from "./components/Footer";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
     <>
-      <MainNavBar />
-      <Home />
-      <Footer />
+      <Router>
+        <MainNavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:title" element={<ProjectDetail />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

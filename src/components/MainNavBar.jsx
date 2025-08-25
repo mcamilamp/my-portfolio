@@ -33,13 +33,18 @@ function MainNavBar() {
     <nav className={`navBar ${showNav ? "" : "navBar-hidden"}`}>
       <div className="links">
         <ul className="nav-links">
-          {["Inicio", "Sobre mí", "Proyectos", "Contacto"].map((link) => (
+          {[
+            { label: "Inicio", href: "/" },
+            { label: "Sobre mí", href: "/about" },
+            { label: "Proyectos", href: "#projects" },
+            { label: "Contacto", href: "#contact" },
+          ].map((link) => (
             <li
-              key={link}
-              className={activeLink === link ? "active" : ""}
-              onClick={() => setActiveLink(link)}
+              key={link.label}
+              className={activeLink === link.label ? "active" : ""}
+              onClick={() => setActiveLink(link.label)}
             >
-              {link}
+              <a href="{link.href}">{link.label}</a>
             </li>
           ))}
         </ul>
