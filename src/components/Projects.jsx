@@ -1,40 +1,7 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-
 import "../assets/styles/Projects.css";
-import project1Img from "../assets/images/1.png";
-import project2Img from "../assets/images/2.png";
-import project3Img from "../assets/images/3.png";
-import project4Img from "../assets/images/4.png";
-
-const projects = [
-  {
-    title: "AdaptEdu",
-    description:
-      "Aplicación educativa personalizada según estilos de aprendizaje.",
-    image: project1Img,
-    filter: "Web",
-  },
-  {
-    title: "Ride Share Connect",
-    description: "Plataforma de transporte compartido con reservas y pagos.",
-    image: project2Img,
-    filter: "Web",
-  },
-  {
-    title: "Airline App",
-    description: "Sistema para aerolíneas con gestión de vuelos y usuarios.",
-    image: project3Img,
-    filter: "QA",
-  },
-  {
-    title: "Airline",
-    description: "Sistema para aerolíneas con gestión de vuelos y usuarios.",
-    image: project4Img,
-    filter: "PM",
-  },
-];
+import { projects } from "../data/projects";
 
 function Projects() {
   const [activeFilter, setActiveFilter] = React.useState("Todos");

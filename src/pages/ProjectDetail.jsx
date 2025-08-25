@@ -1,44 +1,7 @@
 import { useParams } from "react-router-dom";
-import project1Img from "../assets/images/1.png";
-import project2Img from "../assets/images/2.png";
-import project3Img from "../assets/images/3.png";
-import project4Img from "../assets/images/4.png";
+import "../assets/styles/ProjectDetail.css";
+import { projects, techIcons } from "../data/projects";
 
-const projects = [
-  {
-    title: "AdaptEdu",
-    description:
-      "Aplicación educativa personalizada según estilos de aprendizaje.",
-    image: project1Img,
-    filter: "Web",
-    details:
-      "AdaptEdu es una aplicación web que personaliza el contenido educativo según los estilos de aprendizaje de los usuarios. Utiliza algoritmos de inteligencia artificial para adaptar lecciones, ejercicios y evaluaciones, mejorando la retención y comprensión del material.",
-  },
-  {
-    title: "Ride Share Connect",
-    description: "Plataforma de transporte compartido con reservas y pagos.",
-    image: project2Img,
-    filter: "Web",
-    details:
-      "Ride Share Connect es una plataforma que facilita el transporte compartido entre usuarios. Permite a los conductores ofrecer viajes y a los pasajeros reservar asientos, gestionar pagos y calificar experiencias, promoviendo una movilidad más sostenible.",
-  },
-  {
-    title: "Airline App",
-    description: "Sistema para aerolíneas con gestión de vuelos y usuarios.",
-    image: project3Img,
-    filter: "QA",
-    details:
-      "Airline App es un sistema integral para aerolíneas que gestiona vuelos, reservas y perfiles de usuarios. Incluye funcionalidades para check-in en línea, notificaciones de vuelo y administración de programas de fidelidad, mejorando la experiencia del cliente.",
-  },
-  {
-    title: "Airline",
-    description: "Sistema para aerolíneas con gestión de vuelos y usuarios.",
-    image: project4Img,
-    filter: "PM",
-    details:
-      "Airline App es un sistema integral para aerolíneas que gestiona vuelos, reservas y perfiles de usuarios. Incluye funcionalidades para check-in en línea, notificaciones de vuelo y administración de programas de fidelidad, mejorando la experiencia del cliente.",
-  },
-];
 function ProjectDetail() {
   const { title } = useParams();
   const project = projects.find((p) => p.title === decodeURIComponent(title));
@@ -49,12 +12,58 @@ function ProjectDetail() {
 
   return (
     <section className="project-detail">
-      <h2>{project.title}</h2>
-      <img src={project.image} alt={project.title} />
-      <p>{project.description}</p>
-      <span className={`project-badge ${project.filter.toLowerCase()}`}>
-        {project.filter}
-      </span>
+      <div className="project-left">
+        <img src={project.image} alt={project.title} className="main-image" />
+        <div className="carousel">
+          {project.carousel.map((img, index) => (
+            <img key={index} src={img} alt={`preview-${index}`} />
+          ))}
+        </div>
+      </div>
+
+      <div className="project-right">
+        <h2>{project.title}</h2>
+        <p>{project.details}</p>
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-link"
+        >
+          Ver código en GitHub
+        </a>
+        <div className="technologies">
+          <h3>Tecnologías Utilizadas:</h3>
+          <div className="tech-icons">
+            {project.technologies.map((tech, index) => {
+              const Icon = techIcons[tech];
+              return Icon ? (
+                <div key={index} className="tech-icon">
+                  <Icon
+                    size={40}
+                    color={
+                      tech === "React"
+                        ? "#61DBFB"
+                        : tech === "Node.js"
+                        ? "#68A063"
+                        : tech === "CSS"
+                        ? "#264de4"
+                        : tech === "MongoDB"
+                        ? "#4DB33D"
+                        : "#000"
+                    }
+                  />
+                  <small className="tech-name">{tech}</small>
+                </div>
+              ) : (
+                <div key={index} className="tech-icon">
+                  <small className="tech-name">{tech}</small>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
