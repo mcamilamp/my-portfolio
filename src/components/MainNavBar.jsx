@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/MainNavBar.CSS";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSun } from "react-icons/fa";
@@ -44,7 +45,7 @@ function MainNavBar() {
               className={activeLink === link.label ? "active" : ""}
               onClick={() => setActiveLink(link.label)}
             >
-              <a href="{link.href}">{link.label}</a>
+              <Link to={link.href}>{link.label}</Link>
             </li>
           ))}
         </ul>

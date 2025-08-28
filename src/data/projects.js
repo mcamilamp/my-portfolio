@@ -30,7 +30,7 @@ export const projects = [
       "AdaptEdu es una aplicación web que personaliza el contenido educativo según los estilos de aprendizaje de los usuarios. Utiliza algoritmos de inteligencia artificial para adaptar lecciones, ejercicios y evaluaciones, mejorando la retención y comprensión del material.",
     github: "https://github.com/usuario/adaptedu",
     technologies: ["React", "Node.js", "CSS", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3],
+    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
   },
   {
     title: "Ride Share Connect",
@@ -41,7 +41,7 @@ export const projects = [
       "Ride Share Connect es una plataforma que facilita el transporte compartido entre usuarios. Permite a los conductores ofrecer viajes y a los pasajeros reservar asientos, gestionar pagos y calificar experiencias, promoviendo una movilidad más sostenible.",
     github: "https://github.com/usuario/rideshare",
     technologies: ["React", "Node.js", "CSS", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3],
+    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
   },
   {
     title: "Airline App",
@@ -52,7 +52,7 @@ export const projects = [
       "Airline App es un sistema integral para aerolíneas que gestiona vuelos, reservas y perfiles de usuarios. Incluye funcionalidades para check-in en línea, notificaciones de vuelo y administración de programas de fidelidad, mejorando la experiencia del cliente.",
     github: "https://github.com/usuario/airlineapp",
     technologies: ["React", "Node.js", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3],
+    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
   },
   {
     title: "Airline",
@@ -63,6 +63,6 @@ export const projects = [
       "Airline App es un sistema integral para aerolíneas que gestiona vuelos, reservas y perfiles de usuarios. Incluye funcionalidades para check-in en línea, notificaciones de vuelo y administración de programas de fidelidad, mejorando la experiencia del cliente.",
     github: "https://github.com/usuario/airline",
     technologies: ["React", "CSS"],
-    carousel: [carrusel1, carrusel2, carrusel3],
+    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
   },
 ];
