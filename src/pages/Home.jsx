@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/Home.CSS";
 import Projects from "../components/Projects.jsx";
 import TechSlider from "../components/TechSlider";
@@ -22,8 +23,21 @@ function Home() {
         </p>
 
         <div className="buttons-home">
-          <button className="btn-pink">Sobre mí</button>
-          <button className="btn-yellow">Mi CV</button>
+          <Link
+            to="/about
+          "
+            className="btn-pink"
+          >
+            Sobre mí
+          </Link>
+          <button
+            className="btn-yellow"
+            onClick={() =>
+              window.open("/cv-mcamilamp.pdf", "_blank", "noopener,noreferrer")
+            }
+          >
+            Mi CV
+          </button>
         </div>
       </div>
       {/* <div className="home-image">

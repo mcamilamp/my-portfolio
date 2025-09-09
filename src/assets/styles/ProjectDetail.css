@@ -42,6 +42,7 @@
   transition: background 0.3s;
   border-right: #f0db4f 6px solid;
   border-bottom: #f0db4f 6px solid;
+  width: 300px;
 }
 
 .github-link:hover {
