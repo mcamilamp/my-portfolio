@@ -4,6 +4,8 @@ import MainNavBar from "./components/MainNavBar";
 import Footer from "./components/Footer";
 import ProjectDetail from "./pages/ProjectDetail";
 import AboutMe from "./pages/AboutMe";
+import Projects from "./components/Projects";
+import Theme from "../src/assets/styles/Theme.css";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/project/:title" element={<ProjectDetail />} />
           <Route path="/about" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
       </Router>

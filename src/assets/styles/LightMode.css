@@ -1,0 +1,126 @@
+body {
+  background-color: #1b1a2c;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cuando se active light-mode */
+body.light-mode {
+  background-color: #d8d7fa;
+  color: #1b1a2c;
+  overflow-x: hidden;
+  background-image: radial-gradient(
+    rgba(53, 49, 49, 0.13) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+/* Home en modo claro */
+body.light-mode .home-content h1,
+body.light-mode .home-content h2,
+body.light-mode .home-content p,
+body.light-mode .title-contact,
+body.light-mode .text-contact,
+body.light-mode .tech-slider-header .title-tech-slider,
+body.light-mode .footer p,
+body.light-mode .footer a,
+body.light-mode .projects-title,
+body.light-mode .project-content h3,
+body.light-mode .projects-nav li,
+body.light-mode .project-content p,
+body.light-mode .skills-title {
+  color: #1b1a2c;
+}
+
+/* body.light-mode .highlight-name {
+  color: #ffffff;
+} */
+
+body.light-mode .projects-nav li:hover {
+  background-color: hsla(0, 0%, 100%, 0.527);
+}
+
+body.light-mode .projects-nav li.active {
+  background-color: hsla(0, 0%, 100%, 0.527);
+}
+
+/* Botones en modo claro */
+body.light-mode .btn-pink,
+body.light-mode .btn-yellow,
+body.light-mode .btn-contact {
+  background-color: #ffffff;
+  color: #1b1a2c;
+}
+
+body.light-mode .btn-pink:hover {
+  background-color: #ff0080;
+  color: white;
+}
+
+body.light-mode .btn-yellow:hover {
+  background-color: #f0db4f;
+  color: #1b1a2c;
+}
+
+body.light-mode .navBar a {
+  color: #1b1a2c;
+}
+
+/* Projects section */
+
+body.light-mode .project-card {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(27, 26, 44, 0.1);
+}
+
+/* Footer */
+body.light-mode .footer {
+  background-color: #bfbeec;
+  color: #1b1a2c;
+}
+
+/* Project Page */
+body.light-mode .arrow {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.light-mode .github-link {
+  background: #ffffff;
+  color: #1b1a2c;
+}
+
+body.light-mode .tech-name {
+  color: #1b1a2c;
+}
+
+/* Tech section */
+
+body.light-mode .tech-item.react {
+  color: #37b0d1;
+}
+body.light-mode .tech-item.mysql {
+  color: #1a78c0;
+}
+body.light-mode .tech-item.github {
+  color: #1b1a2c;
+}
+
+/* About me section */
+body.light-mode .aboutMe-content h1,
+body.light-mode .aboutMe-content h2,
+body.light-mode .aboutMe-content p {
+  color: #1b1a2c;
+}
+
+body.light-mode .span-name {
+  color: #ff0080;
+}
+
+body.light-mode .interest:hover {
+  background: #ff0080;
+}
+
+body.light-mode .skill-icon.github {
+  color: #000000;
+}

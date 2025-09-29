@@ -78,7 +78,7 @@ function ProjectDetail() {
                     size={40}
                     color={
                       tech === "React"
-                        ? "#61DBFB"
+                        ? "#37b0d1"
                         : tech === "Node.js"
                         ? "#68A063"
                         : tech === "CSS"

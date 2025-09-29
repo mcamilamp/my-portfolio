@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../assets/styles/MainNavBar.CSS";
+import "../assets/styles/MainNavBar.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSun } from "react-icons/fa";
+import "../assets/styles/LightMode.css";
 
 function MainNavBar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,9 +12,19 @@ function MainNavBar() {
   const [activeLink, setActiveLink] = useState("home");
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle("light-mode");
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    document.body.classList.toggle("light-mode", newMode);
+    localStorage.setItem("darkMode", newMode);
   };
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedMode);
+    if (savedMode) {
+      document.body.classList.add("light-mode");
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +48,7 @@ function MainNavBar() {
           {[
             { label: "Inicio", href: "/" },
             { label: "Sobre mí", href: "/about" },
-            { label: "Proyectos", href: "#projects" },
+            { label: "Proyectos", href: "/projects" },
             { label: "Contacto", href: "#contact" },
           ].map((link) => (
             <li
