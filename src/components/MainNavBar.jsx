@@ -10,6 +10,8 @@ function MainNavBar() {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [activeLink, setActiveLink] = useState("home");
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [language, setLanguage] = useState("ES");
 
   const toggleDarkMode = () => {
     const newMode = !darkMode;
@@ -18,12 +20,24 @@ function MainNavBar() {
     localStorage.setItem("darkMode", newMode);
   };
 
+  const toggleLanguageMenu = () => {
+    setShowLanguageMenu(!showLanguageMenu);
+  };
+
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+    setShowLanguageMenu(false);
+    localStorage.setItem("language", lang);
+  };
+
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(savedMode);
     if (savedMode) {
       document.body.classList.add("light-mode");
     }
+    const savedLanguage = localStorage.getItem("language") || "ES";
+    setLanguage(savedLanguage);
   }, []);
 
   useEffect(() => {
@@ -62,9 +76,21 @@ function MainNavBar() {
         </ul>
       </div>
       <div className="toggle-container">
-        <span className="label">
-          ES <IoIosArrowDown />
-        </span>
+        <div className="language-selector">
+          <span className="label" onClick={toggleLanguageMenu}>
+            {language} <IoIosArrowDown />
+          </span>
+          {showLanguageMenu && (
+            <ul className="language-menu">
+              {language !== "ES" && (
+                <li onClick={() => changeLanguage("ES")}>ES</li>
+              )}
+              {language !== "EN" && (
+                <li onClick={() => changeLanguage("EN")}>EN</li>
+              )}
+            </ul>
+          )}
+        </div>
         <div
           className={`switch ${darkMode ? "" : "active"}`}
           onClick={toggleDarkMode}

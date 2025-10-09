@@ -124,3 +124,8 @@ body.light-mode .interest:hover {
 body.light-mode .skill-icon.github {
   color: #000000;
 }
+
+body.light-mode .language-menu {
+  border: 1.5px solid #d8d7fa;
+  box-shadow: none;
+}

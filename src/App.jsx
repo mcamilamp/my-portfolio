@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import ProjectDetail from "./pages/ProjectDetail";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./components/Projects";
-import Theme from "../src/assets/styles/Theme.css";
 
 function App() {
   return (
