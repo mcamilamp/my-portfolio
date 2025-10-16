@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/MainNavBar.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSun } from "react-icons/fa";
 import "../assets/styles/LightMode.css";
+
+import { translate } from "../utils/translate";
+import { LanguageContext } from "../context/LanguageContext";
 
 function MainNavBar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,7 +14,7 @@ function MainNavBar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [activeLink, setActiveLink] = useState("home");
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
-  const [language, setLanguage] = useState("ES");
+  const { language, changeLanguage } = useContext(LanguageContext);
 
   const toggleDarkMode = () => {
     const newMode = !darkMode;
@@ -24,26 +27,20 @@ function MainNavBar() {
     setShowLanguageMenu(!showLanguageMenu);
   };
 
-  const changeLanguage = (lang) => {
-    setLanguage(lang);
+  const handleChangeLanguage = (lang) => {
+    changeLanguage(lang);
     setShowLanguageMenu(false);
-    localStorage.setItem("language", lang);
   };
 
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(savedMode);
-    if (savedMode) {
-      document.body.classList.add("light-mode");
-    }
-    const savedLanguage = localStorage.getItem("language") || "ES";
-    setLanguage(savedLanguage);
+    if (savedMode) document.body.classList.add("light-mode");
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       if (currentScrollY === 0) {
         setShowNav(true);
       } else {
@@ -51,30 +48,34 @@ function MainNavBar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  useEffect(() => {}, [language]);
 
   return (
     <nav className={`navBar ${showNav ? "" : "navBar-hidden"}`}>
       <div className="links">
         <ul className="nav-links">
           {[
-            { label: "Inicio", href: "/" },
-            { label: "Sobre mí", href: "/about" },
-            { label: "Proyectos", href: "/projects" },
-            { label: "Contacto", href: "#contact" },
+            { key: "home", href: "/" },
+            { key: "about", href: "/about" },
+            { key: "projects", href: "/projects" },
+            { key: "contact", href: "#contact" },
           ].map((link) => (
             <li
-              key={link.label}
-              className={activeLink === link.label ? "active" : ""}
-              onClick={() => setActiveLink(link.label)}
+              key={link.key}
+              className={activeLink === link.key ? "active" : ""}
+              onClick={() => setActiveLink(link.key)}
             >
-              <Link to={link.href}>{link.label}</Link>
+              <Link to={link.href}>
+                {translate(language, `nav.${link.key}`)}
+              </Link>
             </li>
           ))}
         </ul>
       </div>
+
       <div className="toggle-container">
         <div className="language-selector">
           <span className="label" onClick={toggleLanguageMenu}>

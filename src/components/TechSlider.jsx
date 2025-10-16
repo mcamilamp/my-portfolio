@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Marquee from "react-fast-marquee";
-import "../assets/styles/TechSlider.css"; // Ensure you have the correct path to your CSS file
+import "../assets/styles/TechSlider.css";
 import {
   SiReact,
   SiTailwindcss,
@@ -18,12 +18,18 @@ import {
   SiFigma,
   SiCypress,
 } from "react-icons/si";
+import { LanguageContext } from "../context/LanguageContext";
+import { translate } from "../utils/translate";
 
 const TechSlider = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="tech-slider-wrapper">
       <div className="tech-slider-header">
-        <h2 className="title-tech-slider">Mi Stack tecnológico</h2>
+        <h2 className="title-tech-slider">
+          {translate(language, "techSlider.title")}
+        </h2>
       </div>
       <div className="tech-slider">
         <Marquee speed={50} gradient={false}>

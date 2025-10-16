@@ -2,15 +2,19 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import "../assets/styles/ProjectDetail.css";
 import { projects, techIcons } from "../data/projects";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
+import { translate } from "../utils/translate";
 
 function ProjectDetail() {
+  const { language } = useContext(LanguageContext);
   const { title } = useParams();
   const project = projects.find((p) => p.title === decodeURIComponent(title));
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   if (!project) {
-    return <div>Proyecto no encontrado</div>;
+    return <div>{translate(language, "projectDetail.notFound")}</div>;
   }
 
   const nextSlide = () => {
@@ -64,11 +68,11 @@ function ProjectDetail() {
           rel="noopener noreferrer"
           className="github-link"
         >
-          Ver código en GitHub
+          {translate(language, "projectDetail.githubLink")}
         </a>
 
         <div className="technologies">
-          <h3>Tecnologías Utilizadas:</h3>
+          <h3>{translate(language, "projectDetail.technologiesTitle")}</h3>
           <div className="tech-icons">
             {project.technologies.map((tech, index) => {
               const Icon = techIcons[tech];

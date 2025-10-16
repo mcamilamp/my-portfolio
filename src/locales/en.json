@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "login": "Log In",
+    "register": "Sign Up"
+  },
+  "texts": {
+    "welcome": "Welcome to my website",
+    "description": "I’m a web developer passionate about creating digital experiences."
+  },
+  "home": {
+    "title": "Systems Engineering Student",
+    "slogan": "Able to build, test, and lead with vision and commitment.",
+    "aboutBtn": "About Me",
+    "cvBtn": "My Resume",
+    "contactTitle": "Interested in my professional profile?",
+    "contactText": "Available to collaborate on development, design, or project management.",
+    "contactBtn": "Contact Me Now!"
+  },
+  "myProjects": {
+    "title": "My Projects",
+    "subtitle": "Some projects I’ve worked on as a developer and project manager.",
+    "projects": [
+      {
+        "title": "AdaptEdu",
+        "description": "AI-powered personalized learning platform that adapts to visual, auditory, and kinesthetic learning styles.",
+        "button": "View Project"
+      },
+      {
+        "title": "Ride Share Connect",
+        "description": "Web platform that connects clients with shared transport providers. Includes bookings, payments, and reviews.",
+        "button": "View Project"
+      },
+      {
+        "title": "Airline",
+        "description": "Web application for airline flight management. I was responsible for scheduling, design, and documentation.",
+        "button": "View Project"
+      }
+    ]
+  },
+
+  "about": {
+    "title": "About Me",
+    "greeting": "Hi! I'm",
+    "paragraph1": "Systems Engineering student focused on full stack web development, project management, and software testing. I’m passionate about frontend development, creating dynamic interfaces with React, JavaScript, HTML5, CSS3, SASS, Tailwind CSS, and design tools like Figma.",
+    "paragraph2": "I have knowledge in MySQL, PostgreSQL, version control with Git/GitHub, and agile methodologies like Scrum, where I’ve learned to collaborate, manage sprints, and adapt efficiently to changes. Currently, I’m training in QA and manual testing to contribute to stable, user-centered products.",
+    "interestsTitle": "My Interests",
+    "interests": [
+      "Frontend and backend web development",
+      "Interactive UI/UX design",
+      "Software Testing and QA",
+      "Project management with agile methodologies (Scrum)"
+    ],
+    "skillsTitle": "My Main Skills"
+  },
+
+  "footer": {
+    "verse": "Arise and Shine - Isaiah 60:1",
+    "thanks": "Thank you for visiting my web portfolio."
+  },
+
+  "techSlider": {
+    "title": "My Tech Stack"
+  },
+
+  "projectDetail": {
+    "notFound": "Project not found",
+    "githubLink": "View code on GitHub",
+    "technologiesTitle": "Technologies Used:"
+  }
+}

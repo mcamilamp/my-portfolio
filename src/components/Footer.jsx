@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "../assets/styles/Footer.css";
+import { LanguageContext } from "../context/LanguageContext";
+import { translate } from "../utils/translate";
 
 function Footer() {
+  const { language } = useContext(LanguageContext);
+
   return (
     <footer className="footer">
       <p className="footer-name">María Camila Mercado Payares</p>
@@ -25,9 +29,9 @@ function Footer() {
           <FaEnvelope />
         </a>
       </div>
-      <p className="footer-bible">Levántate y Resplandece - Isaías 60:1</p>
+      <p className="footer-bible">{translate(language, "footer.verse")}</p>
       <p className="footer-copy">
-        © {new Date().getFullYear()} Gracias por visitar mi portafolio web.
+        © {new Date().getFullYear()} {translate(language, "footer.thanks")}
       </p>
     </footer>
   );
