@@ -30,24 +30,28 @@
         "key": "adaptedu",
         "title": "AdaptEdu",
         "description": "Personalized educational application based on learning styles.",
+        "details": "AdaptEdu is a web application that personalizes educational content according to users' learning styles. It uses artificial intelligence algorithms to adapt lessons, exercises, and assessments, improving material retention and comprehension.",
         "button": "View Project"
       },
       {
         "key": "rideshare",
         "title": "Ride Share Connect",
         "description": "Web platform that connects clients with shared transport providers. Includes bookings, payments, and reviews.",
+        "details": "Ride Share Connect is a platform that facilitates shared transportation between users. It allows drivers to offer rides and passengers to book seats, manage payments, and rate experiences, promoting more sustainable mobility.",
         "button": "View Project"
       },
       {
         "key": "airline",
         "title": "Airline",
         "description": "Web application for airline flight and booking management.",
+        "details": "Airline is a comprehensive system for airlines that manages flights, bookings, and user profiles. It includes features for online check-in, flight notifications, and loyalty program administration, improving the customer experience.",
         "button": "View Project"
       },
       {
         "key": "airlineApp",
         "title": "Airline App (PM)",
         "description": "Project focused on leadership and management for app development.",
+        "details": "Airline App is a project where project management and leadership skills were applied. It involved coordinating the development of an airline application, managing teams, defining requirements, and ensuring successful product delivery.",
         "button": "View Project"
       }
     ]
@@ -55,7 +59,7 @@
   "about": {
     "title": "About Me",
     "greeting": "Hi! I'm",
-    "paragraph1": "Systems Engineering student focused on full stack web development, project management, and software testing. I’m passionate about frontend development, creating dynamic interfaces with React, JavaScript, HTML5, CSS3, SASS, Tailwind CSS, and design tools like Figma.",
+    "paragraph1": "Systems Engineering student focused on full stack web development, project management, and software testing. I’m passionate about frontend development, creating dynamic interfaces with React, JavaScript, Next.js, HTML5, CSS3, SASS, Tailwind CSS, and design tools like Figma.",
     "paragraph2": "I have knowledge in MySQL, PostgreSQL, version control with Git/GitHub, and agile methodologies like Scrum, where I’ve learned to collaborate, manage sprints, and adapt efficiently to changes. Currently, I’m training in QA and manual testing to contribute to stable, user-centered products.",
     "interestsTitle": "My Interests",
     "interests": [
@@ -80,5 +84,33 @@
     "notFound": "Project not found",
     "githubLink": "View code on GitHub",
     "technologiesTitle": "Technologies Used:"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "location": "Location",
+      "social": "Social Media"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required"
+    }
   }
 }

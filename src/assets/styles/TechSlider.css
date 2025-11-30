@@ -47,6 +47,9 @@
 .tech-item.react {
   color: #61dafb;
 }
+.tech-item.nextjs {
+  color: #ffffff;
+}
 .tech-item.tailwind {
   color: #38bdf8;
 }
@@ -89,3 +92,4 @@
 .tech-item.figma {
   color: #f24e1e;
 }
+

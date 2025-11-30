@@ -31,24 +31,28 @@
         "key": "adaptedu",
         "title": "AdaptEdu",
         "description": "Aplicación educativa personalizada basada en estilos de aprendizaje.",
+        "details": "AdaptEdu es una aplicación web que personaliza el contenido educativo según los estilos de aprendizaje de los usuarios. Utiliza algoritmos de inteligencia artificial para adaptar lecciones, ejercicios y evaluaciones, mejorando la retención y comprensión del material.",
         "button": "Ver Proyecto"
       },
       {
         "key": "rideshare",
         "title": "Ride Share Connect",
         "description": "Plataforma de transporte compartido con reservas y pagos.",
+        "details": "Ride Share Connect es una plataforma que facilita el transporte compartido entre usuarios. Permite a los conductores ofrecer viajes y a los pasajeros reservar asientos, gestionar pagos y calificar experiencias, promoviendo una movilidad más sostenible.",
         "button": "Ver Proyecto"
       },
       {
         "key": "airline",
         "title": "Airline",
         "description": "Sistema de gestión de vuelos y reservas.",
+        "details": "Airline es un sistema integral para aerolíneas que gestiona vuelos, reservas y perfiles de usuarios. Incluye funcionalidades para check-in en línea, notificaciones de vuelo y administración de programas de fidelidad, mejorando la experiencia del cliente.",
         "button": "Ver Proyecto"
       },
       {
         "key": "airlineApp",
         "title": "Airline App (PM)",
         "description": "Proyecto de gestión y liderazgo para desarrollo de aplicaciones.",
+        "details": "Airline App es un proyecto donde se aplicaron habilidades de gestión de proyectos y liderazgo. Se coordinó el desarrollo de una aplicación para aerolíneas, gestionando equipos, definiendo requisitos y asegurando la entrega exitosa del producto.",
         "button": "Ver Proyecto"
       }
     ]
@@ -57,7 +61,7 @@
   "about": {
     "title": "Sobre mí",
     "greeting": "¡Hola! soy",
-    "paragraph1": "Estudiante de Ingeniería de Sistemas. Con enfoque en desarrollo web full stack, Gestión de proyectos y Software Testing. Me apasiona el frontend, creando interfaces dinámicas con React, JavaScript, HTML5, CSS3, SASS, Tailwind CSS y herramientas de diseño como Figma.",
+    "paragraph1": "Estudiante de Ingeniería de Sistemas. Con enfoque en desarrollo web full stack, Gestión de proyectos y Software Testing. Me apasiona el frontend, creando interfaces dinámicas con React, JavaScript, Next.js, HTML5, CSS3, SASS, Tailwind CSS y herramientas de diseño como Figma.",
     "paragraph2": "Cuento con conocimientos en MySQL, PostgreSQL, control de versiones con Git/GitHub, y metodologías ágiles como Scrum, donde he aprendido a trabajar de forma colaborativa, gestionar tareas en sprints y adaptarme a cambios de manera eficiente. Actualmente me formo en QA y pruebas manuales, con el objetivo de contribuir a productos estables y centrados en el usuario.",
     "interestsTitle": "Mis intereses",
     "interests": [
@@ -82,5 +86,33 @@
     "notFound": "Proyecto no encontrado",
     "githubLink": "Ver código en GitHub",
     "technologiesTitle": "Tecnologías Utilizadas:"
+  },
+
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Error al enviar el mensaje. Intenta nuevamente."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "email": "Email",
+      "location": "Ubicación",
+      "social": "Redes Sociales"
+    },
+    "validation": {
+      "nameRequired": "El nombre es requerido",
+      "emailRequired": "El email es requerido",
+      "emailInvalid": "Email inválido",
+      "subjectRequired": "El asunto es requerido",
+      "messageRequired": "El mensaje es requerido"
+    }
   }
 }

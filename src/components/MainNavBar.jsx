@@ -61,7 +61,7 @@ function MainNavBar() {
             { key: "home", href: "/" },
             { key: "about", href: "/about" },
             { key: "projects", href: "/projects" },
-            { key: "contact", href: "#contact" },
+            { key: "contact", href: "/contact" },
           ].map((link) => (
             <li
               key={link.key}

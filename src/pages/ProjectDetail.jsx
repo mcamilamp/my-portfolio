@@ -8,14 +8,22 @@ import { translate } from "../utils/translate";
 
 function ProjectDetail() {
   const { language } = useContext(LanguageContext);
-  const { title } = useParams();
-  const project = projects.find((p) => p.title === decodeURIComponent(title));
+  const { title: projectKey } = useParams();
+  const projectData = projects.find((p) => p.key === projectKey);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (!project) {
+  if (!projectData) {
     return <div>{translate(language, "projectDetail.notFound")}</div>;
   }
+
+  // Combine project data with translations
+  const translations = translate(language, "myProjects.projects") || [];
+  const translated = translations.find((t) => t.key === projectData.key);
+  const project = {
+    ...projectData,
+    ...translated,
+  };
 
   const nextSlide = () => {
     setCurrentIndex((prev) =>
@@ -83,6 +91,8 @@ function ProjectDetail() {
                     color={
                       tech === "React"
                         ? "#37b0d1"
+                        : tech === "Next.js"
+                        ? "#ffffff"
                         : tech === "Node.js"
                         ? "#68A063"
                         : tech === "CSS"

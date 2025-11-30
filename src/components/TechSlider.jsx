@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import "../assets/styles/TechSlider.css";
 import {
   SiReact,
+  SiNextdotjs,
   SiTailwindcss,
   SiSpringboot,
   SiPostgresql,
@@ -35,6 +36,9 @@ const TechSlider = () => {
         <Marquee speed={50} gradient={false}>
           <div className="tech-item react">
             <SiReact />
+          </div>
+          <div className="tech-item nextjs">
+            <SiNextdotjs />
           </div>
           <div className="tech-item tailwind">
             <SiTailwindcss />

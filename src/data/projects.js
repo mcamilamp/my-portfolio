@@ -10,10 +10,11 @@ import carrusel3 from "../assets/images/carrusel3.png";
 
 // ICONOS
 import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiNextdotjs } from "react-icons/si";
 
 export const techIcons = {
   React: FaReact,
+  "Next.js": SiNextdotjs,
   "Node.js": FaNodeJs,
   CSS: FaCss3Alt,
   MongoDB: SiMongodb,

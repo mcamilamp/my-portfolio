@@ -46,9 +46,9 @@ function Home() {
         <p className="text-contact">
           {translate(language, "home.contactText")}
         </p>
-        <button className="btn-contact">
+        <Link to="/contact" className="btn-contact">
           {translate(language, "home.contactBtn")}
-        </button>
+        </Link>
       </div>
     </section>
   );

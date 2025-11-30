@@ -8,6 +8,7 @@ import {
   FaReact,
   FaJs,
 } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 import { LanguageContext } from "../context/LanguageContext";
 import { translate } from "../utils/translate";
 
@@ -58,6 +59,10 @@ function AboutMe() {
           <div className="skill-item">
             <FaReact className="skill-icon react" />
             <p>React</p>
+          </div>
+          <div className="skill-item">
+            <SiNextdotjs className="skill-icon nextjs" />
+            <p>Next.js</p>
           </div>
           <div className="skill-item">
             <FaGithub className="skill-icon github" />

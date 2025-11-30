@@ -44,8 +44,8 @@ function Projects() {
           .filter((p) => activeFilter === "Todos" || p.filter === activeFilter)
           .map((project, index) => (
             <Link
-              to={`/project/${encodeURIComponent(project.title)}`}
-              key={project.title}
+              to={`/project/${project.key}`}
+              key={project.key}
               className="project-card"
             >
               <img
