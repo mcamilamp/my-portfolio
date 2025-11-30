@@ -31,7 +31,7 @@
 
 .project-card {
   width: 450px;
-  height: 340px;
+  /* height: 340px; */
   background: #363555;
   border-radius: 15px;
   overflow: hidden;
