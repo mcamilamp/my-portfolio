@@ -7,6 +7,9 @@ export const translate = (lang, keyPath) => {
   const keys = keyPath.split(".");
   let value = translations[lang.toLowerCase()];
   for (const key of keys) {
+    if (Array.isArray(value)) {
+      break;
+    }
     value = value?.[key];
     if (value === undefined) break;
   }

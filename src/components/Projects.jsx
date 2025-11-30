@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/Projects.css";
 import { projects } from "../data/projects";
+import { LanguageContext } from "../context/LanguageContext";
+import { translate } from "../utils/translate";
 
 function Projects() {
+  const { language } = useContext(LanguageContext);
   const [activeFilter, setActiveFilter] = React.useState("Todos");
+
+  const translations = translate(language, "myProjects.projects") || [];
+
+  const combinedProjects = projects.map((project) => {
+    const translated = translations.find((t) => t.key === project.key);
+    return {
+      ...project,
+      ...translated,
+    };
+  });
 
   return (
     <section className="projects-section">
-      <h2 className="projects-title">Mis Proyectos</h2>
+      <h2 className="projects-title">
+        {translate(language, "myProjects.title")}
+      </h2>
 
       <nav className="projects-nav">
         <ul>
@@ -25,7 +40,7 @@ function Projects() {
       </nav>
 
       <div className="projects-container">
-        {projects
+        {combinedProjects
           .filter((p) => activeFilter === "Todos" || p.filter === activeFilter)
           .map((project, index) => (
             <Link

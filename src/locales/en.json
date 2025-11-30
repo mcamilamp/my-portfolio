@@ -24,26 +24,34 @@
   },
   "myProjects": {
     "title": "My Projects",
-    "subtitle": "Some projects I’ve worked on as a developer and project manager.",
+    "subtitle": "A selection of my most outstanding projects",
     "projects": [
       {
+        "key": "adaptedu",
         "title": "AdaptEdu",
-        "description": "AI-powered personalized learning platform that adapts to visual, auditory, and kinesthetic learning styles.",
+        "description": "Personalized educational application based on learning styles.",
         "button": "View Project"
       },
       {
+        "key": "rideshare",
         "title": "Ride Share Connect",
         "description": "Web platform that connects clients with shared transport providers. Includes bookings, payments, and reviews.",
         "button": "View Project"
       },
       {
+        "key": "airline",
         "title": "Airline",
-        "description": "Web application for airline flight management. I was responsible for scheduling, design, and documentation.",
+        "description": "Web application for airline flight and booking management.",
+        "button": "View Project"
+      },
+      {
+        "key": "airlineApp",
+        "title": "Airline App (PM)",
+        "description": "Project focused on leadership and management for app development.",
         "button": "View Project"
       }
     ]
   },
-
   "about": {
     "title": "About Me",
     "greeting": "Hi! I'm",

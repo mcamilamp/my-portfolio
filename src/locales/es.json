@@ -26,21 +26,29 @@
 
   "myProjects": {
     "title": "Mis Proyectos",
-    "subtitle": "Algunos proyectos en los que he trabajado como desarrolladora y gestora.",
     "projects": [
       {
+        "key": "adaptedu",
         "title": "AdaptEdu",
-        "description": "Plataforma educativa personalizada con IA que adapta el aprendizaje a estilos como visual, auditivo y kinestésico.",
+        "description": "Aplicación educativa personalizada basada en estilos de aprendizaje.",
         "button": "Ver Proyecto"
       },
       {
+        "key": "rideshare",
         "title": "Ride Share Connect",
-        "description": "Plataforma web para conectar clientes con proveedores de transporte compartido. Incluye reservas, pagos y reseñas.",
+        "description": "Plataforma de transporte compartido con reservas y pagos.",
         "button": "Ver Proyecto"
       },
       {
+        "key": "airline",
         "title": "Airline",
-        "description": "Aplicación web para gestión de vuelos de una aerolínea. Me encargué de tiempos, diseño y documentación.",
+        "description": "Sistema de gestión de vuelos y reservas.",
+        "button": "Ver Proyecto"
+      },
+      {
+        "key": "airlineApp",
+        "title": "Airline App (PM)",
+        "description": "Proyecto de gestión y liderazgo para desarrollo de aplicaciones.",
         "button": "Ver Proyecto"
       }
     ]
