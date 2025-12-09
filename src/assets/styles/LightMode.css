@@ -129,3 +129,132 @@ body.light-mode .language-menu {
   border: 1.5px solid #d8d7fa;
   box-shadow: none;
 }
+
+/* Contact Page - Light Mode */
+
+/* Contact Header */
+body.light-mode .contact-header h1 {
+  color: #1b1a2c;
+}
+
+body.light-mode .contact-subtitle {
+  color: #4a4a6a;
+}
+
+/* Contact Form Section */
+body.light-mode .contact-form-section {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(27, 26, 44, 0.1);
+  box-shadow: 0 8px 32px rgba(27, 26, 44, 0.08);
+}
+
+body.light-mode .form-group label {
+  color: #1b1a2c;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+  background: rgba(27, 26, 44, 0.03);
+  border: 2px solid rgba(27, 26, 44, 0.15);
+  color: #1b1a2c;
+}
+
+body.light-mode .form-group input::placeholder,
+body.light-mode .form-group textarea::placeholder {
+  color: #7a7a9a;
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus {
+  background: rgba(27, 26, 44, 0.05);
+  border-color: #ff0099;
+}
+
+body.light-mode .form-group input.error,
+body.light-mode .form-group textarea.error {
+  border-color: #ff4444;
+}
+
+body.light-mode .error-message {
+  color: #ff4444;
+}
+
+body.light-mode .submit-btn {
+  background: #ff0099;
+  color: #ffffff;
+}
+
+body.light-mode .submit-btn:hover:not(:disabled) {
+  box-shadow: 0 10px 25px rgba(255, 0, 153, 0.4);
+}
+
+body.light-mode .success-message {
+  background: rgba(76, 175, 80, 0.15);
+  border: 1px solid #4caf50;
+  color: #2e7d32;
+}
+
+/* Contact Info Section */
+body.light-mode .contact-info-section h2 {
+  color: #1b1a2c;
+}
+
+body.light-mode .info-item {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(27, 26, 44, 0.1);
+}
+
+body.light-mode .info-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(27, 26, 44, 0.1);
+}
+
+body.light-mode .info-icon {
+  color: #ff0099;
+}
+
+body.light-mode .info-item h3 {
+  color: #1b1a2c;
+}
+
+body.light-mode .info-item p,
+body.light-mode .info-item a {
+  color: #4a4a6a;
+}
+
+body.light-mode .info-item a:hover {
+  color: #ff0099;
+}
+
+/* Social Links */
+body.light-mode .social-links {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(27, 26, 44, 0.1);
+}
+
+body.light-mode .social-links h3 {
+  color: #1b1a2c;
+}
+
+body.light-mode .social-icon {
+  background: rgba(27, 26, 44, 0.05);
+  border: 1px solid rgba(27, 26, 44, 0.15);
+  color: #1b1a2c;
+}
+
+body.light-mode .social-icon:hover {
+  box-shadow: 0 10px 25px rgba(27, 26, 44, 0.15);
+}
+
+body.light-mode .social-icon.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  color: #ffffff;
+}
+
+body.light-mode .social-icon.github:hover {
+  background: #1b1a2c;
+  border-color: #1b1a2c;
+  color: #ffffff;
+}
