@@ -1,16 +1,18 @@
 // src/data/projects.js
 import project1Img from "../assets/images/1.png";
-import project2Img from "../assets/images/2.png";
+import hemsMainImg from "../assets/images/hems-main.png";
 import project3Img from "../assets/images/3.png";
 import project4Img from "../assets/images/4.png";
 
 import carrusel1 from "../assets/images/carrusel1.png";
 import carrusel2 from "../assets/images/carrusel2.png";
 import carrusel3 from "../assets/images/carrusel3.png";
+import hemsDevices from "../assets/images/hems-devices.png";
+import hemsVideo from "../assets/images/HEMS-video.mp4";
 
 // ICONOS
-import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs } from "react-icons/si";
+import { FaReact, FaNodeJs, FaCss3Alt, FaSass } from "react-icons/fa";
+import { SiMongodb, SiNextdotjs, SiPostgresql, SiInfluxdb } from "react-icons/si";
 
 export const techIcons = {
   React: FaReact,
@@ -18,6 +20,9 @@ export const techIcons = {
   "Node.js": FaNodeJs,
   CSS: FaCss3Alt,
   MongoDB: SiMongodb,
+  PostgreSQL: SiPostgresql,
+  InfluxDB: SiInfluxdb,
+  SASS: FaSass,
 };
 
 export const projects = [
@@ -33,12 +38,12 @@ export const projects = [
 
   {
     id: 2,
-    key: "rideshare",
-    image: project2Img,
+    key: "hems",
+    image: hemsMainImg,
     filter: "Web",
-    github: "https://github.com/usuario/rideshare",
-    technologies: ["React", "Node.js", "CSS", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
+    github: "https://github.com/mcamilamp/hems.git",
+    technologies: ["Next.js", "PostgreSQL", "InfluxDB", "SASS"],
+    carousel: [hemsMainImg, hemsDevices, hemsVideo],
   },
 
   {

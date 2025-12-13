@@ -94,7 +94,16 @@
   transition: transform 0.3s;
 }
 
-.carousel img:hover {
+.carousel video {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.carousel img:hover,
+.carousel video:hover {
   transform: scale(1.05);
 }
 

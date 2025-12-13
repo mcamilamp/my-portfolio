@@ -34,10 +34,10 @@
         "button": "View Project"
       },
       {
-        "key": "rideshare",
-        "title": "Ride Share Connect",
-        "description": "Web platform that connects clients with shared transport providers. Includes bookings, payments, and reviews.",
-        "details": "Ride Share Connect is a platform that facilitates shared transportation between users. It allows drivers to offer rides and passengers to book seats, manage payments, and rate experiences, promoting more sustainable mobility.",
+        "key": "hems",
+        "title": "HEMS - Home Energy Management System",
+        "description": "Home Energy Management System (HEMS).",
+        "details": "IoT-based system to monitor, analyze, and optimize energy consumption in homes in Santa Marta. Group project that integrates smart devices to provide real-time energy usage analysis, enabling users to make informed decisions to reduce costs and improve energy efficiency.",
         "button": "View Project"
       },
       {

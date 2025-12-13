@@ -12,6 +12,7 @@ function ProjectDetail() {
   const projectData = projects.find((p) => p.key === projectKey);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedMedia, setSelectedMedia] = useState(projectData?.image);
 
   if (!projectData) {
     return <div>{translate(language, "projectDetail.notFound")}</div>;
@@ -48,7 +49,11 @@ function ProjectDetail() {
   return (
     <section className="project-detail">
       <div className="project-left">
-        <img src={project.image} alt={project.title} className="main-image" />
+        {selectedMedia && typeof selectedMedia === 'string' && selectedMedia.endsWith('.mp4') ? (
+          <video src={selectedMedia} controls autoPlay muted loop className="main-image" />
+        ) : (
+          <img src={selectedMedia || project.image} alt={project.title} className="main-image" />
+        )}
 
         <div className="carousel-container">
           <button className="arrow left" onClick={prevSlide}>
@@ -56,9 +61,29 @@ function ProjectDetail() {
           </button>
 
           <div className="carousel">
-            {visibleImages.map((img, index) => (
-              <img key={index} src={img} alt={`preview-${index}`} />
-            ))}
+            {visibleImages.map((item, index) => {
+              const isVideo = typeof item === 'string' && item.endsWith('.mp4');
+              return isVideo ? (
+                <video 
+                  key={index} 
+                  controls 
+                  muted 
+                  loop
+                  onClick={() => setSelectedMedia(item)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <source src={item} type="video/mp4" />
+                </video>
+              ) : (
+                <img 
+                  key={index} 
+                  src={item} 
+                  alt={`preview-${index}`} 
+                  onClick={() => setSelectedMedia(item)}
+                  style={{ cursor: 'pointer' }}
+                />
+              );
+            })}
           </div>
 
           <button className="arrow right" onClick={nextSlide}>
@@ -90,7 +115,7 @@ function ProjectDetail() {
                     size={40}
                     color={
                       tech === "React"
-                        ? "#37b0d1"
+                        ? "#61DAFB"
                         : tech === "Next.js"
                         ? "#ffffff"
                         : tech === "Node.js"
@@ -99,7 +124,13 @@ function ProjectDetail() {
                         ? "#264de4"
                         : tech === "MongoDB"
                         ? "#4DB33D"
-                        : "#000"
+                        : tech === "PostgreSQL"
+                        ? "#336791"
+                        : tech === "InfluxDB"
+                        ? "#22ADF6"
+                        : tech === "SASS"
+                        ? "#CC6699"
+                        : "#666"
                     }
                   />
                   <small className="tech-name">{tech}</small>
