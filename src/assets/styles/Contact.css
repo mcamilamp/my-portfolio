@@ -44,6 +44,27 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.alternative-contact-message {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.alternative-contact-message .email-link {
+  color: #ff0099;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.alternative-contact-message .email-link:hover {
+  color: #ff33aa;
+  border-bottom-color: #ff33aa;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;

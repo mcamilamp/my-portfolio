@@ -70,7 +70,7 @@ function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -79,17 +79,24 @@ function Contact() {
 
     setStatus("sending");
 
-    // Simulate sending email (replace with actual email service)
-    // For now, we'll open the user's email client
-    const mailtoLink = `mailto:mcamilamp@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`
-    )}`;
+    try {
+      // Import emailjs dynamically
+      const emailjs = await import('@emailjs/browser');
+      
+      // Send email using EmailJS
+      await emailjs.default.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'camimerpa@gmail.com',
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-    window.location.href = mailtoLink;
-
-    setTimeout(() => {
       setStatus("success");
       setFormData({
         name: "",
@@ -101,7 +108,14 @@ function Contact() {
       setTimeout(() => {
         setStatus("");
       }, 5000);
-    }, 1000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setStatus("error");
+      
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+    }
   };
 
   return (
@@ -117,6 +131,17 @@ function Contact() {
         <div className="contact-content">
           {/* Contact Form */}
           <div className="contact-form-section">
+            <p className="alternative-contact-message">
+              {translate(language, "contact.alternativeMessage")}{" "}
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=camimerpa@gmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="email-link"
+              >
+                camimerpa@gmail.com
+              </a>
+            </p>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">
@@ -217,7 +242,13 @@ function Contact() {
               <FaEnvelope className="info-icon" />
               <div>
                 <h3>{translate(language, "contact.info.email")}</h3>
-                <a href="mailto:camimerpa@gmail.com">camimerpa@gmail.com</a>
+                <a 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=camimerpa@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  camimerpa@gmail.com
+                </a>
               </div>
             </div>
 

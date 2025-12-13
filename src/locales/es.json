@@ -91,6 +91,7 @@
   "contact": {
     "title": "Contacto",
     "subtitle": "¿Tienes un proyecto en mente? ¡Hablemos!",
+    "alternativeMessage": "O también me puedes escribir directamente desde aquí:",
     "form": {
       "name": "Nombre",
       "email": "Email",
