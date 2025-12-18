@@ -48,10 +48,9 @@
         "button": "View Project"
       },
       {
-        "key": "airlineApp",
-        "title": "Airline App (PM)",
-        "description": "Project focused on leadership and management for app development.",
-        "details": "Airline App is a project where project management and leadership skills were applied. It involved coordinating the development of an airline application, managing teams, defining requirements, and ensuring successful product delivery.",
+        "key": "flower",
+        "title": "Flower Website",
+        "details": "This project holds a special place in my career as it marks one of my first steps into web development. Built from scratch using pure HTML5 and CSS3, it follows the excellent tutorial by 'Online Tutorials' on YouTube. It stands as a testament to my dedication to learning and my attention to visual detail from the very beginning.",
         "button": "View Project"
       }
     ]
@@ -83,6 +82,7 @@
   "projectDetail": {
     "notFound": "Project not found",
     "githubLink": "View code on GitHub",
+    "tutorialLink": "Watch Tutorial",
     "technologiesTitle": "Technologies Used:"
   },
 

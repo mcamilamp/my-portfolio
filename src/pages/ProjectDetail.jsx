@@ -95,14 +95,28 @@ function ProjectDetail() {
       <div className="project-right">
         <h2>{project.title}</h2>
         <p>{project.details}</p>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-link"
-        >
-          {translate(language, "projectDetail.githubLink")}
-        </a>
+        <div className="links-container">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            {translate(language, "projectDetail.githubLink")}
+          </a>
+          
+          {project.tutorial && (
+            <a
+              href={project.tutorial}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tutorial-link"
+            >
+              <i className="fa-brands fa-youtube"></i>
+              {translate(language, "projectDetail.tutorialLink")}
+            </a>
+          )}
+        </div>
 
         <div className="technologies">
           <h3>{translate(language, "projectDetail.technologiesTitle")}</h3>

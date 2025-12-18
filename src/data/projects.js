@@ -1,17 +1,30 @@
 // src/data/projects.js
 import project1Img from "../assets/images/1.png";
-import hemsMainImg from "../assets/images/hems-main.png";
 import project3Img from "../assets/images/3.png";
 import project4Img from "../assets/images/4.png";
+import flowerImg from "../assets/images/flower.png";
 
 import carrusel1 from "../assets/images/carrusel1.png";
 import carrusel2 from "../assets/images/carrusel2.png";
 import carrusel3 from "../assets/images/carrusel3.png";
-import hemsDevices from "../assets/images/hems-devices.png";
 import hemsVideo from "../assets/images/HEMS-video.mp4";
+import hems1 from "../assets/images/hems (1).png";
+import hems2 from "../assets/images/hems (2).png";
+import hems3 from "../assets/images/hems (3).png";
+import hems4 from "../assets/images/hemsDevice.png";
+import hems5 from "../assets/images/hems (5).png";
+import hems6 from "../assets/images/hems (6).png";
+import hemsLogin from "../assets/images/hems-login.png";
+import hemsRegister from "../assets/images/hems-register.png";
+
+import flowerVideo from "../assets/images/flower-video.mp4";
+import flower1 from "../assets/images/flower_1.png";
+import flower2 from "../assets/images/flower_2.png";
+import flower3 from "../assets/images/flower_3.png";
+
 
 // ICONOS
-import { FaReact, FaNodeJs, FaCss3Alt, FaSass } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaCss3Alt, FaSass, FaHtml5 } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiPostgresql, SiInfluxdb } from "react-icons/si";
 
 export const techIcons = {
@@ -19,6 +32,7 @@ export const techIcons = {
   "Next.js": SiNextdotjs,
   "Node.js": FaNodeJs,
   CSS: FaCss3Alt,
+  HTML: FaHtml5,
   MongoDB: SiMongodb,
   PostgreSQL: SiPostgresql,
   InfluxDB: SiInfluxdb,
@@ -39,11 +53,21 @@ export const projects = [
   {
     id: 2,
     key: "hems",
-    image: hemsMainImg,
+    image: hems1,
     filter: "Web",
     github: "https://github.com/mcamilamp/hems.git",
     technologies: ["Next.js", "PostgreSQL", "InfluxDB", "SASS"],
-    carousel: [hemsMainImg, hemsDevices, hemsVideo],
+    carousel: [
+      hemsVideo,
+      hems1,
+      hems2,
+      hems3,
+      hems5,
+      hems4,
+      hems6,
+      hemsLogin,
+      hemsRegister
+    ],
   },
 
   {
@@ -58,12 +82,13 @@ export const projects = [
 
   {
     id: 4,
-    key: "airlineApp",
-    image: project4Img,
-    filter: "PM",
-    github: "https://github.com/usuario/airlineapp",
-    technologies: ["React", "Node.js", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3, carrusel1],
+    key: "flower",
+    image: flowerImg,
+    filter: "Web",
+    github: "https://github.com/mcamilamp/flower-website",
+    tutorial: "https://youtu.be/cLOT0APQzDs?si=GSzPwJ8G2f4w0Ygf",
+    technologies: ["HTML", "CSS"],
+    carousel: [flowerImg, flower1, flower2, flower3, flowerVideo],
   },
 ];
 

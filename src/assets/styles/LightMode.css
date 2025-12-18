@@ -85,7 +85,8 @@ body.light-mode .arrow {
   background: rgba(0, 0, 0, 0.7);
 }
 
-body.light-mode .github-link {
+body.light-mode .github-link,
+body.light-mode .tutorial-link {
   background: #ffffff;
   color: #1b1a2c;
 }

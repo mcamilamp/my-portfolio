@@ -49,10 +49,9 @@
         "button": "Ver Proyecto"
       },
       {
-        "key": "airlineApp",
-        "title": "Airline App (PM)",
-        "description": "Proyecto de gestión y liderazgo para desarrollo de aplicaciones.",
-        "details": "Airline App es un proyecto donde se aplicaron habilidades de gestión de proyectos y liderazgo. Se coordinó el desarrollo de una aplicación para aerolíneas, gestionando equipos, definiendo requisitos y asegurando la entrega exitosa del producto.",
+        "key": "flower",
+        "title": "Sitio Web de Flores",
+        "details": "Este proyecto es fundamental en mi carrera, pues representa uno de mis primeros pasos en el mundo del desarrollo web. Fue construido desde cero utilizando HTML5 y CSS3 puros, siguiendo el excelente tutorial de 'Online Tutorials' en YouTube. Es un testimonio de mi dedicación por aprender y mi atención al detalle visual desde mis inicios.",
         "button": "Ver Proyecto"
       }
     ]
@@ -85,6 +84,7 @@
   "projectDetail": {
     "notFound": "Proyecto no encontrado",
     "githubLink": "Ver código en GitHub",
+    "tutorialLink": "Ver Tutorial",
     "technologiesTitle": "Tecnologías Utilizadas:"
   },
 
