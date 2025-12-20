@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "../assets/styles/Home.CSS";
+import "../assets/styles/Home.css";
 import Projects from "../components/Projects.jsx";
 import TechSlider from "../components/TechSlider";
 import { translate } from "../utils/translate";
