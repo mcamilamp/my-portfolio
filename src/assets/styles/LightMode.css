@@ -86,7 +86,8 @@ body.light-mode .arrow {
 }
 
 body.light-mode .github-link,
-body.light-mode .tutorial-link {
+body.light-mode .tutorial-link,
+body.light-mode .pdf-link {
   background: #ffffff;
   color: #1b1a2c;
 }

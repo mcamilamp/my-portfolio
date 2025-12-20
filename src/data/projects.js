@@ -1,8 +1,10 @@
 // src/data/projects.js
-import project1Img from "../assets/images/1.png";
 import project3Img from "../assets/images/3.png";
 import project4Img from "../assets/images/4.png";
 import flowerImg from "../assets/images/flower.png";
+import sauceDemoMain from "../assets/images/QA-sourceDemo.png";
+import sauceDemo1 from "../assets/images/QA-sourceDemo (1).png";
+import sauceDemo2 from "../assets/images/QA-sourceDemo (2).png";
 
 import carrusel1 from "../assets/images/carrusel1.png";
 import carrusel2 from "../assets/images/carrusel2.png";
@@ -16,10 +18,12 @@ import hems5 from "../assets/images/hems (5).png";
 import hems6 from "../assets/images/hems (6).png";
 import hemsLogin from "../assets/images/hems-login.png";
 import hemsRegister from "../assets/images/hems-register.png";
+import adaptEdu1 from "../assets/images/adaptEdu (1).png";
+import adaptEdu2 from "../assets/images/adaptEdu (2).png";
+import imgAdaptedu from "../assets/images/imgAdaptedu.png";
 
 import flowerVideo from "../assets/images/flower-video.mp4";
 import flower1 from "../assets/images/flower_1.png";
-import flower2 from "../assets/images/flower_2.png";
 import flower3 from "../assets/images/flower_3.png";
 
 
@@ -42,12 +46,12 @@ export const techIcons = {
 export const projects = [
   {
     id: 1,
-    key: "adaptedu",
-    image: project1Img,
-    filter: "Web",
-    github: "https://github.com/usuario/adaptedu",
-    technologies: ["React", "Node.js", "CSS", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
+    key: "sauce_demo",
+    image: sauceDemoMain,
+    filter: "QA",
+    github: "https://github.com/mcamilamp/QA-SauceDemo.git",
+    technologies: ["Manual Testing", "Test Planning", "Bug Reporting", "Excel"],
+    carousel: [sauceDemoMain, sauceDemo1, sauceDemo2],
   },
 
   {
@@ -72,23 +76,23 @@ export const projects = [
 
   {
     id: 3,
-    key: "airline",
-    image: project3Img,
-    filter: "QA",
-    github: "https://github.com/usuario/airlineapp",
-    technologies: ["React", "Node.js", "MongoDB"],
-    carousel: [carrusel1, carrusel2, carrusel3, carrusel1, carrusel2],
+    key: "pm_project",
+    image: imgAdaptedu,
+    filter: "PM",
+    pdf: "/TRABAJO FINAL PM.pdf",
+    technologies: [""],
+    carousel: [imgAdaptedu, adaptEdu1, adaptEdu2],
   },
 
   {
     id: 4,
     key: "flower",
-    image: flowerImg,
+    image: flower1,
     filter: "Web",
     github: "https://github.com/mcamilamp/flower-website",
     tutorial: "https://youtu.be/cLOT0APQzDs?si=GSzPwJ8G2f4w0Ygf",
     technologies: ["HTML", "CSS"],
-    carousel: [flowerImg, flower1, flower2, flower3, flowerVideo],
+    carousel: [flower1, flower3, flowerImg, flowerVideo],
   },
 ];
 

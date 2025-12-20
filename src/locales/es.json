@@ -28,10 +28,10 @@
     "title": "Mis Proyectos",
     "projects": [
       {
-        "key": "adaptedu",
-        "title": "AdaptEdu",
-        "description": "Aplicación educativa personalizada basada en estilos de aprendizaje.",
-        "details": "AdaptEdu es una aplicación web que personaliza el contenido educativo según los estilos de aprendizaje de los usuarios. Utiliza algoritmos de inteligencia artificial para adaptar lecciones, ejercicios y evaluaciones, mejorando la retención y comprensión del material.",
+        "key": "sauce_demo",
+        "title": "QA Engineer – Sauce Demo",
+        "description": "Proyecto de pruebas QA manual centrado en validar funcionalidades principales de e-commerce.",
+        "details": "Diseño y ejecución de casos de prueba, reporte de errores y problemas de UX, y documentación del proceso de QA utilizando prácticas estándar de la industria.",
         "button": "Ver Proyecto"
       },
       {
@@ -42,15 +42,16 @@
         "button": "Ver Proyecto"
       },
       {
-        "key": "airline",
-        "title": "Airline",
-        "description": "Sistema de gestión de vuelos y reservas.",
-        "details": "Airline es un sistema integral para aerolíneas que gestiona vuelos, reservas y perfiles de usuarios. Incluye funcionalidades para check-in en línea, notificaciones de vuelo y administración de programas de fidelidad, mejorando la experiencia del cliente.",
+        "key": "pm_project",
+        "title": "Gestión de Proyecto Educativo - AdaptEdu",
+        "description": "Liderazgo en planificación y gestión de software educativo con IA.",
+        "details": "Lideré la planificación y gestión de un proyecto de software educativo enfocado en reducir la brecha de acceso y calidad en la educación personalizada. El proyecto consistió en el desarrollo de una plataforma web que utiliza inteligencia artificial para adaptar contenidos y actividades según el estilo de aprendizaje de cada estudiante.",
         "button": "Ver Proyecto"
       },
       {
         "key": "flower",
         "title": "Sitio Web de Flores",
+        "description": "Sitio web estático diseñado con HTML y CSS.",
         "details": "Este proyecto es fundamental en mi carrera, pues representa uno de mis primeros pasos en el mundo del desarrollo web. Fue construido desde cero utilizando HTML5 y CSS3 puros, siguiendo el excelente tutorial de 'Online Tutorials' en YouTube. Es un testimonio de mi dedicación por aprender y mi atención al detalle visual desde mis inicios.",
         "button": "Ver Proyecto"
       }
@@ -84,6 +85,7 @@
   "projectDetail": {
     "notFound": "Proyecto no encontrado",
     "githubLink": "Ver código en GitHub",
+    "viewDocument": "Ver Documento",
     "tutorialLink": "Ver Tutorial",
     "technologiesTitle": "Tecnologías Utilizadas:"
   },

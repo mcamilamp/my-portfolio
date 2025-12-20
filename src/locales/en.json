@@ -27,10 +27,10 @@
     "subtitle": "A selection of my most outstanding projects",
     "projects": [
       {
-        "key": "adaptedu",
-        "title": "AdaptEdu",
-        "description": "Personalized educational application based on learning styles.",
-        "details": "AdaptEdu is a web application that personalizes educational content according to users' learning styles. It uses artificial intelligence algorithms to adapt lessons, exercises, and assessments, improving material retention and comprehension.",
+        "key": "sauce_demo",
+        "title": "QA Engineer – Sauce Demo",
+        "description": "Manual QA testing project focused on validating core e-commerce functionalities.",
+        "details": "Designed and executed test cases, reported bugs and UX issues, and documented the QA process using industry-standard practices.",
         "button": "View Project"
       },
       {
@@ -41,15 +41,16 @@
         "button": "View Project"
       },
       {
-        "key": "airline",
-        "title": "Airline",
-        "description": "Web application for airline flight and booking management.",
-        "details": "Airline is a comprehensive system for airlines that manages flights, bookings, and user profiles. It includes features for online check-in, flight notifications, and loyalty program administration, improving the customer experience.",
+        "key": "pm_project",
+        "title": "Educational Project Management - AdaptEdu",
+        "description": "Leadership in planning and management of AI-based educational software.",
+        "details": "I led the planning and management of an educational software project focused on reducing the gap in access and quality in personalized education. The project involved developing a web platform that uses artificial intelligence to adapt content and activities according to each student's learning style.",
         "button": "View Project"
       },
       {
         "key": "flower",
         "title": "Flower Website",
+        "description": "Static website designed with HTML and CSS.",
         "details": "This project holds a special place in my career as it marks one of my first steps into web development. Built from scratch using pure HTML5 and CSS3, it follows the excellent tutorial by 'Online Tutorials' on YouTube. It stands as a testament to my dedication to learning and my attention to visual detail from the very beginning.",
         "button": "View Project"
       }
@@ -82,6 +83,7 @@
   "projectDetail": {
     "notFound": "Project not found",
     "githubLink": "View code on GitHub",
+    "viewDocument": "View Document",
     "tutorialLink": "Watch Tutorial",
     "technologiesTitle": "Technologies Used:"
   },

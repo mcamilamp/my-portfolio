@@ -96,14 +96,28 @@ function ProjectDetail() {
         <h2>{project.title}</h2>
         <p>{project.details}</p>
         <div className="links-container">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-          >
-            {translate(language, "projectDetail.githubLink")}
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              {translate(language, "projectDetail.githubLink")}
+            </a>
+          )}
+
+          {project.pdf && (
+            <a
+              href={project.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pdf-link"
+            >
+              <i className="fa-solid fa-file-pdf"></i>
+              {translate(language, "projectDetail.viewDocument")}
+            </a>
+          )}
           
           {project.tutorial && (
             <a
@@ -118,45 +132,47 @@ function ProjectDetail() {
           )}
         </div>
 
-        <div className="technologies">
-          <h3>{translate(language, "projectDetail.technologiesTitle")}</h3>
-          <div className="tech-icons">
-            {project.technologies.map((tech, index) => {
-              const Icon = techIcons[tech];
-              return Icon ? (
-                <div key={index} className="tech-icon">
-                  <Icon
-                    size={40}
-                    color={
-                      tech === "React"
-                        ? "#61DAFB"
-                        : tech === "Next.js"
-                        ? "#ffffff"
-                        : tech === "Node.js"
-                        ? "#68A063"
-                        : tech === "CSS"
-                        ? "#264de4"
-                        : tech === "MongoDB"
-                        ? "#4DB33D"
-                        : tech === "PostgreSQL"
-                        ? "#336791"
-                        : tech === "InfluxDB"
-                        ? "#22ADF6"
-                        : tech === "SASS"
-                        ? "#CC6699"
-                        : "#666"
-                    }
-                  />
-                  <small className="tech-name">{tech}</small>
-                </div>
-              ) : (
-                <div key={index} className="tech-icon">
-                  <small className="tech-name">{tech}</small>
-                </div>
-              );
-            })}
+        {project.technologies && project.technologies.length > 0 && project.technologies[0] !== "" && (
+          <div className="technologies">
+            <h3>{translate(language, "projectDetail.technologiesTitle")}</h3>
+            <div className="tech-icons">
+              {project.technologies.map((tech, index) => {
+                const Icon = techIcons[tech];
+                return Icon ? (
+                  <div key={index} className="tech-icon">
+                    <Icon
+                      size={40}
+                      color={
+                        tech === "React"
+                          ? "#61DAFB"
+                          : tech === "Next.js"
+                          ? "#ffffff"
+                          : tech === "Node.js"
+                          ? "#68A063"
+                          : tech === "CSS"
+                          ? "#264de4"
+                          : tech === "MongoDB"
+                          ? "#4DB33D"
+                          : tech === "PostgreSQL"
+                          ? "#336791"
+                          : tech === "InfluxDB"
+                          ? "#22ADF6"
+                          : tech === "SASS"
+                          ? "#CC6699"
+                          : "#666"
+                      }
+                    />
+                    <small className="tech-name">{tech}</small>
+                  </div>
+                ) : (
+                  <div key={index} className="tech-icon">
+                    <small className="tech-name">{tech}</small>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
