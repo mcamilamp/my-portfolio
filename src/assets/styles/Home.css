@@ -116,13 +116,6 @@
   z-index: 0;
 }
 
-.highlight-name {
-  position: relative;
-  display: inline-block;
-  font-family: "allura", cursive;
-  font-size: 5.5rem; /* Ajusta según tu diseño */
-}
-
 .highlight-name,
 .highlight-lastname,
 .highlight-desc {
@@ -131,7 +124,11 @@
   font-weight: 700;
 }
 
-/* Subrayado para nombre */
+.highlight-name {
+  font-family: "allura", cursive;
+  font-size: 5.5rem;
+}
+
 .highlight-name::after {
   content: "";
   position: absolute;
@@ -156,6 +153,73 @@
   transform: skewX(-10deg);
 }
 
+/* Responsive Design for Home */
+@media (max-width: 968px) {
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .highlight-name {
+    font-size: 4rem;
+  }
+
+  .home-image {
+    width: 260px;
+    height: 317px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .highlight-name {
+    font-size: 3rem;
+  }
+
+  .buttons-home {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .btn-pink, .btn-yellow {
+    width: 80%;
+  }
+
+  .contact::after,
+  .contact::before {
+    width: 70px;
+  }
+
+  .title-contact {
+    font-size: 1.5rem;
+  }
+
+  .text-contact {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-name {
+    font-size: 2.5rem;
+  }
+
+  .home-image {
+    width: 220px;
+    height: 268px;
+  }
+
+  .btn-pink, .btn-yellow {
+    width: 100%;
+  }
+}
+
+
+
 .contact {
   text-align: center;
 }
@@ -164,7 +228,7 @@
 .contact::before {
   content: "";
   display: block;
-  width: 1000px;
+  width: 70px;
   height: 3px;
   background-color: #ff0099;
   margin: 0.9rem auto;

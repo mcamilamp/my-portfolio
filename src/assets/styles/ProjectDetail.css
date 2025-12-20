@@ -166,3 +166,64 @@
 .arrow.right {
   right: -45px;
 }
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .project-detail {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .project-left, .project-right {
+    width: 100%;
+  }
+
+  .main-image, .carousel-container {
+    max-width: 100%;
+  }
+
+  .project-right {
+    text-align: center;
+    align-items: center;
+  }
+
+  .links-container {
+    justify-content: center;
+  }
+
+  .tech-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    padding: 0;
+  }
+
+  .carousel img, .carousel video {
+    width: 120px;
+    height: 75px;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .arrow.left {
+    left: -15px;
+  }
+
+  .arrow.right {
+    right: -15px;
+  }
+
+  .github-link, .tutorial-link, .pdf-link {
+    width: 100%;
+    min-width: unset;
+  }
+}
+

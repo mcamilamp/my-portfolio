@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/MainNavBar.css";
 import { IoIosArrowDown } from "react-icons/io";
-import { FaSun } from "react-icons/fa";
+import { FaSun, FaBars, FaTimes } from "react-icons/fa";
 import "../assets/styles/LightMode.css";
 
 import { translate } from "../utils/translate";
@@ -14,6 +14,7 @@ function MainNavBar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [activeLink, setActiveLink] = useState("home");
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, changeLanguage } = useContext(LanguageContext);
 
   const toggleDarkMode = () => {
@@ -25,6 +26,10 @@ function MainNavBar() {
 
   const toggleLanguageMenu = () => {
     setShowLanguageMenu(!showLanguageMenu);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleChangeLanguage = (lang) => {
@@ -55,7 +60,11 @@ function MainNavBar() {
 
   return (
     <nav className={`navBar ${showNav ? "" : "navBar-hidden"}`}>
-      <div className="links">
+      <div className="hamburger" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <div className={`links ${isMenuOpen ? "nav-active" : ""}`}>
         <ul className="nav-links">
           {[
             { key: "home", href: "/" },
@@ -66,7 +75,10 @@ function MainNavBar() {
             <li
               key={link.key}
               className={activeLink === link.key ? "active" : ""}
-              onClick={() => setActiveLink(link.key)}
+              onClick={() => {
+                setActiveLink(link.key);
+                setIsMenuOpen(false);
+              }}
             >
               <Link to={link.href}>
                 {translate(language, `nav.${link.key}`)}

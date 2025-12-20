@@ -31,6 +31,7 @@
 
 .project-card {
   width: 450px;
+  max-width: 100%;
   /* height: 340px; */
   background: #363555;
   border-radius: 15px;
@@ -122,6 +123,7 @@
   text-align: center;
 
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .projects-nav li {
@@ -158,12 +160,35 @@
   background-color: #62d47b;
 }
 
-.projects-nav li:hover {
-  background-color: hsla(0, 0%, 100%, 0.3);
-  border-radius: 5px;
-}
-
+.projects-nav li:hover,
 .projects-nav li.active {
   background-color: hsla(0, 0%, 100%, 0.3);
   border-radius: 5px;
 }
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2rem 5%;
+  }
+
+  .projects-nav ul {
+    gap: 1rem;
+    font-size: 14px;
+  }
+
+  .projects-nav li {
+    padding: 8px 10px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .title-badge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+

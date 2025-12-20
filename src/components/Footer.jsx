@@ -12,20 +12,20 @@ function Footer() {
       <p className="footer-name">María Camila Mercado Payares</p>
       <div className="footer-icons">
         <a
-          href="https://github.com/tuusuario"
+          href="https://github.com/mcamilamp"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/tuusuario"
+          href="https://www.linkedin.com/in/maria-camila-mercado-payares-1a2383289/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaLinkedin />
         </a>
-        <a href="mailto:tucorreo@gmail.com">
+        <a href="mailto:camimerpa@gmail.com">
           <FaEnvelope />
         </a>
       </div>

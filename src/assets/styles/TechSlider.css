@@ -93,3 +93,16 @@
   color: #f24e1e;
 }
 
+/* Responsive Design for TechSlider */
+@media (max-width: 768px) {
+  .tech-item {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+
+  .tech-slider-header .title-tech-slider {
+    font-size: 1.5rem;
+  }
+}
+
+
