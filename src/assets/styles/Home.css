@@ -208,16 +208,18 @@
 
 @media (max-width: 480px) {
   .highlight-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .home-image {
-    width: 220px;
-    height: 268px;
+    width: 200px;
+    height: 244px;
   }
 
   .btn-pink, .btn-yellow {
     width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
   }
 }
 

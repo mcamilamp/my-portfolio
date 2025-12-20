@@ -134,9 +134,7 @@ function Contact() {
             <p className="alternative-contact-message">
               {translate(language, "contact.alternativeMessage")}{" "}
               <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=camimerpa@gmail.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="mailto:camimerpa@gmail.com" 
                 className="email-link"
               >
                 camimerpa@gmail.com
@@ -243,9 +241,7 @@ function Contact() {
               <div>
                 <h3>{translate(language, "contact.info.email")}</h3>
                 <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=camimerpa@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:camimerpa@gmail.com"
                 >
                   camimerpa@gmail.com
                 </a>

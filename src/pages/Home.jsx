@@ -47,10 +47,8 @@ function Home() {
           {translate(language, "home.contactText")}
         </p>
         <a 
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=camimerpa@gmail.com" 
+          href="mailto:camimerpa@gmail.com" 
           className="btn-contact"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           {translate(language, "home.contactBtn")}
         </a>
